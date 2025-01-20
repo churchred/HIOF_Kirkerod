@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Forelesning/Forelesning.iml" filepath="$PROJECT_DIR$/Forelesning/Forelesning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Forelesning 2/Forelesning 2.iml" filepath="$PROJECT_DIR$/Forelesning 2/Forelesning 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/HIOF_Kirkerod.iml" filepath="$PROJECT_DIR$/.idea/HIOF_Kirkerod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oblig_1/Oblig_1.iml" filepath="$PROJECT_DIR$/Oblig_1/Oblig_1.iml" />
+    </modules>
+  </component>
+</project>
