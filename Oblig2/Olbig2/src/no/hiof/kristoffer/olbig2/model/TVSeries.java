@@ -1,4 +1,4 @@
-package model;
+package no.hiof.kristoffer.olbig2.model;
 
 //      TVSeries
 //          title - TV-seriens tittel

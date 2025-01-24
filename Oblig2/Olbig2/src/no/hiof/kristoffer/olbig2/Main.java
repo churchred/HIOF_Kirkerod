@@ -1,4 +1,8 @@
 
+
+package no.hiof.kristoffer.olbig2;
+
+
 // Oppgave 2.1 - Modellklasser
 // Vi skal kunne opprette TV-serier med tilhørende data.
 // Vi trenger derfor noen klasser for å representere dette.
@@ -27,5 +31,6 @@
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println();
     }
 }
