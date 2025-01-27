@@ -22,7 +22,23 @@ public class Episode {
         this.runTime = runTime;
     }
 
-    public String getTitle() {
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setEpisodeNumber(int episodeNumber) {
+        this.episodeNumber = episodeNumber;
+    }
+
+    public void setSeasonNumber(int seasonNumber) {
+        this.seasonNumber = seasonNumber;
+    }
+
+    public void setRunTime(int runTime) {
+        this.runTime = runTime;
+    }
+
+    public String getTitle(){
         return title;
     }
 
@@ -38,9 +54,7 @@ public class Episode {
         return runTime;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+
 
 
 
