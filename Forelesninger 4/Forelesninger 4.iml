@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Forelesning 1 - Introduksjon" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Forelesning 2 - Grunnkonsepter" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Forelesning 3 - Metoder, Klasser og Objekter" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

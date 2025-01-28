@@ -26,11 +26,25 @@ package no.hiof.kristoffer.olbig2;
 // Husk å gjøre instansvariablene private, og lag get- og set-metoder for disse (innkapsling).
 
 
-
+import no.hiof.kristoffer.olbig2.model.Episode;
+import no.hiof.kristoffer.olbig2.model.TVSeries;
 
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println();
+
+        // Oppgave 2.2 - Opprette objekter
+        //      Lag en kjørbar klasse kalt Main.java som skal benytte klassene du akkurat laget.
+        //      Opprett et objekt av TVSeries-klassen for en TV-serie du selv ønsker.
+        //      Opprett og legg til noen Episode-objekter til denne TV-serien.
+
+        TVSeries series1 = new TVSeries(
+                "Leverage",
+                "A group of thieves steal from criminals to help regular people",
+                "12.01.12");
+
+        series1.addEpisodes(new Episode("The first job", 1, 1));
+        series1.addEpisodes(new Episode("The second job", 2, 1));
+        series1.addEpisodes(new Episode("The third job", 3, 1));
     }
 }

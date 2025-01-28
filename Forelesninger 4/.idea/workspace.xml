@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="17e1a142-cfde-4fea-9f28-c00c8b7637ae" name="Changes" comment="" />
+    <list default="true" id="4e5f9328-c545-4527-b931-10791f5416db" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,33 +10,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="2s4byjYhjeymwnWvVRUpxwyD3oO" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2sDIV42V8Xt3TWTtDHZErNiTMTQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "<unknown>",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/krist/OneDrive/Documents/Github/HIOF_Kirkerod/Oblig2",
-    "settings.editor.selected.configurable": "Errors"
+    "last_opened_file_path": "C:/Users/krist/OneDrive/Documents/Github/HIOF_Kirkerod/Forelesninger 4/Forelesning 6 - ArrayList/Etter Forelesning"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="17e1a142-cfde-4fea-9f28-c00c8b7637ae" name="Changes" comment="" />
-      <created>1737718050560</created>
+      <changelist id="4e5f9328-c545-4527-b931-10791f5416db" name="Changes" comment="" />
+      <created>1737983739337</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1737718050560</updated>
+      <updated>1737983739337</updated>
     </task>
     <servers />
   </component>

@@ -15,41 +15,48 @@ public class Episode {
     private int seasonNumber;
     private int runTime;
 
-    public void Main(String title, int epNr, int SeaNr, int runTime){
+    public Episode(String title, int episodeNumber, int seasonNumber, int runTime){
         this.title = title;
-        this.episodeNumber = epNr;
-        this.seasonNumber = SeaNr;
+        this.episodeNumber = episodeNumber;
+        this.seasonNumber = seasonNumber;
         this.runTime = runTime;
     }
 
-    public void setTitle(String title) {
+    public Episode(String title, int episodeNumber, int seasonNumber){
         this.title = title;
-    }
-
-    public void setEpisodeNumber(int episodeNumber) {
         this.episodeNumber = episodeNumber;
-    }
-
-    public void setSeasonNumber(int seasonNumber) {
         this.seasonNumber = seasonNumber;
     }
 
+    @Override
+    public String toString() {
+        System.out.println();
+    }
+
+    // Set functions
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public void setEpisodeNumber(int episodeNumber) {
+        this.episodeNumber = episodeNumber;
+    }
+    public void setSeasonNumber(int seasonNumber) {
+        this.seasonNumber = seasonNumber;
+    }
     public void setRunTime(int runTime) {
         this.runTime = runTime;
     }
 
+    // Get functions
     public String getTitle(){
         return title;
     }
-
     public int getSeasonNumber() {
         return seasonNumber;
     }
-
     public int getEpisodeNumber() {
         return episodeNumber;
     }
-
     public int getRunTime() {
         return runTime;
     }
