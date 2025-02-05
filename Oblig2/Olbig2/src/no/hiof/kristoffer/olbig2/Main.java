@@ -38,13 +38,22 @@ public class Main {
         //      Opprett et objekt av TVSeries-klassen for en TV-serie du selv ønsker.
         //      Opprett og legg til noen Episode-objekter til denne TV-serien.
 
+        // Lag en serie
         TVSeries series1 = new TVSeries(
                 "Leverage",
                 "A group of thieves steal from criminals to help regular people",
                 "12.01.12");
 
-        series1.addEpisodes(new Episode("The first job", 1, 1));
-        series1.addEpisodes(new Episode("The second job", 2, 1));
-        series1.addEpisodes(new Episode("The third job", 3, 1));
+        // Lage noen episoder og legge inn i serien
+        series1.addEpisodes(new Episode("The first job", 1, 1, 30));
+        series1.addEpisodes(new Episode("The second job", 2, 1, 30));
+        series1.addEpisodes(new Episode("The third job", 3, 1, 30));
+
+        // Print toString for episoder
+        System.out.println(series1.getEpisodes().toString());
+
+        // Print toString for series
+        System.out.println(series1.toString());
+
     }
 }

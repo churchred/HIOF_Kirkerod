@@ -28,9 +28,14 @@ public class Episode {
         this.seasonNumber = seasonNumber;
     }
 
+
     @Override
-    public String toString() {
-        System.out.println();
+    public String toString(){
+        return(
+                        "\nEpisode title: " + title +
+                        "\nEpisode number: " + episodeNumber +
+                        "\nSeason number: " + seasonNumber +
+                        "\nRuntime in minutes: " + runTime);
     }
 
     // Set functions

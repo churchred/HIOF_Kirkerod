@@ -26,6 +26,16 @@ public class TVSeries {
         this.releaseDate = releaseDate;
     }
 
+    @Override
+    public String toString(){
+        return(
+                "TV series Title: " + title +
+                        "\nDescription: " + description +
+                        "\nRelease date: " + releaseDate +
+                        "\nNumber of episodes: " + episodes.size());
+    }
+
+
     // Set functions
     public void setTitle(String title) {
         this.title = title;
@@ -52,6 +62,6 @@ public class TVSeries {
         return title;
     }
     public ArrayList<Episode> getEpisodes() {
-        return episodes;
+        return new ArrayList<>(episodes);
     }
 }

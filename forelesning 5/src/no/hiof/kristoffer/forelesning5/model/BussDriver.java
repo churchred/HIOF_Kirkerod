@@ -3,8 +3,20 @@ package no.hiof.kristoffer.forelesning5.model;
 
 public class BussDriver extends Person{
 
-    public BussDriver(String firstName, String lastName, int age){
+    private String route;
+
+    public BussDriver(String firstName, String lastName, int age,
+                      String route) {
         super(firstName, lastName, age);
+
+        this.route = route;
     }
 
+    public String getRoute() {
+        return route;
+    }
+
+    public void setRoute(String route) {
+        this.route = route;
+    }
 }
