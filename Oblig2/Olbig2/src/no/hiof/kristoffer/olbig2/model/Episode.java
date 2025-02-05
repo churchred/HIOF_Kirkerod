@@ -32,7 +32,7 @@ public class Episode {
     @Override
     public String toString(){
         return(
-                        "\nEpisode title: " + title +
+                        "\n\nEpisode title: " + title +
                         "\nEpisode number: " + episodeNumber +
                         "\nSeason number: " + seasonNumber +
                         "\nRuntime in minutes: " + runTime);
