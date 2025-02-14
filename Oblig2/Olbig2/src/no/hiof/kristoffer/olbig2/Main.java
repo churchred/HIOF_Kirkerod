@@ -29,6 +29,9 @@ package no.hiof.kristoffer.olbig2;
 import no.hiof.kristoffer.olbig2.model.Episode;
 import no.hiof.kristoffer.olbig2.model.TVSeries;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -38,22 +41,54 @@ public class Main {
         //      Opprett et objekt av TVSeries-klassen for en TV-serie du selv ønsker.
         //      Opprett og legg til noen Episode-objekter til denne TV-serien.
 
-        // Lag en serie
+
+        // Oppgave 2.2 - Opprette objekter
+        // Opprett et objekt av TVSeries-klassen for en TV-serie du selv ønsker.
+
         TVSeries series1 = new TVSeries(
                 "Leverage",
                 "A group of thieves steal from criminals to help regular people",
                 "12.01.12");
 
-        // Lage noen episoder og legge inn i serien
-        series1.addEpisodes(new Episode("The first job", 1, 1, 30));
-        series1.addEpisodes(new Episode("The second job", 2, 1, 30));
-        series1.addEpisodes(new Episode("The third job", 3, 1, 30));
+        // Opprett og legg til noen Episode-objekter til denne TV-serien.
+        //  series1.addEpisodes(new Episode("The first job", 1, 1, 30));
+        // series1.addEpisodes(new Episode("The second job", 2, 1, 30));
+        // series1.addEpisodes(new Episode("The third job", 3, 1, 30));
 
+
+        // Oppgave 2.3 - Utskrift og toString()
         // Print toString for episoder
-        System.out.println(series1.getEpisodes().toString());
+        //System.out.println(series1.getEpisodes().toString());
 
         // Print toString for series
-        System.out.println(series1.toString());
+        //System.out.println(series1.toString());
+
+
+        // Oppgave 2.4 - Hente episoder i sesong
+        // Lag en metode i TVSeries som henter ut alle episodene i en sesong
+        // Loop som lager 5 sesonger med 10 episode i hver sesong
+        // Oppgave 2.6 - Generere tilfeldig spilletid
+        int maxSeasons = 5;
+        int maxEpisodes = 10;
+        Random randomNumber = new Random();
+        for(int season = 1; season<maxSeasons+1; season++){
+            for(int episode = 1; episode<maxEpisodes+1; episode++){
+                series1.addEpisodes(new Episode("S" + season + "E" + episode, episode, season, randomNumber.nextInt(31-20) + 20));
+            }
+        }
+
+        // Hent alle episoder i sesong 4 og skriv deretter ut navnet på hver episode i sesongen til konsollen.
+        ArrayList<Episode> episodesInSeasonFour = series1.getEpisodesInSeason(4);
+        for(Episode episode : episodesInSeasonFour){
+            System.out.println(episode.getTitle());
+        }
+
+        // Hent så ut averageRunTime og skriv den ut til terminalen.
+        System.out.println(series1.getAverageRunTime());
+
+        // Oppgave 2.8 - "Teste" antall sesonger
+        series1.addEpisodes(new Episode("test", 1, 10, 30));
+        series1.addEpisodes(new Episode("test", 1, 6, 30));
 
     }
 }
