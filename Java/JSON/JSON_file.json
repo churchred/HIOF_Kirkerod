@@ -1,0 +1,21 @@
+[ {
+  "name" : "Batman",
+  "secretIdentitiy" : "Bruce Wayne",
+  "sideKicks" : [ {
+    "name" : "Robin",
+    "secretIdentitiy" : "Jason Todd",
+    "sideKicks" : [ ]
+  }, {
+    "name" : "Batgirl",
+    "secretIdentitiy" : "Barbara Gordon",
+    "sideKicks" : [ ]
+  } ]
+}, {
+  "name" : "Wolverine",
+  "secretIdentitiy" : "Logan",
+  "sideKicks" : [ ]
+}, {
+  "name" : "Wonder Woman",
+  "secretIdentitiy" : "Diana Prince",
+  "sideKicks" : [ ]
+} ]
