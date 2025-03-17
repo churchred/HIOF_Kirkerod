@@ -13,6 +13,10 @@ public class TVSeries {
     private double averageRuntime;
     private int numSeasons = 0;
 
+    public TVSeries(){
+
+    }
+
     public TVSeries(String title, String description, LocalDate releaseDate) {
         this.title = title;
         this.description = description;
