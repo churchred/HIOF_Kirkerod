@@ -3,9 +3,7 @@ package no.hiof.kristoffer;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
-import no.hiof.kristoffer.model.Chimp;
-import no.hiof.kristoffer.model.HoneyBadger;
-import no.hiof.kristoffer.model.Panda;
+import io.javalin.vue.VueComponent;
 import no.hiof.kristoffer.model.Zoo;
 import no.hiof.kristoffer.repository.ZooDataRepository;
 import no.hiof.kristoffer.repository.ZooRepository;
@@ -17,7 +15,10 @@ import java.util.ArrayList;
 public class Application {
     public static void main(String[] args) {
 
-        Javalin app = Javalin.create().start();
+        Javalin app = Javalin.create(javalinConfig -> {
+            javalinConfig.staticFiles.enableWebjars();
+            javalinConfig.vue.vueInstanceNameInJs = "app";
+        }).start();
 
         ZooRepository zooRepository = new ZooDataRepository();
 
@@ -56,12 +57,7 @@ public class Application {
 
 
         // --- Pages ---
-        app.get("/", new Handler() {
-            @Override
-            public void handle(@NotNull Context context) throws Exception {
-                context.result("Hello Javalin!");
-            }
-        });
+        app.get("/", new VueComponent("home-page"));
 
         app.get("/other-page", new Handler() {
             @Override
