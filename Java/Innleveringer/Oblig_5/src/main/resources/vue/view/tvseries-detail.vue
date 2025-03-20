@@ -1,19 +1,41 @@
 <template id="tvseries-detail-template">
-  <p>Navigation Menu:</p>
-  <ul>
-    <li><a href="/">Home Page</a></li>
-    <li><a href="/tvseries">TV Series Overview</a></li>
-    <li><a href="/add-tvseries">Add TV Series</a></li>
-  </ul>
+    <nav>
+    <p>Linjeforeningen</p>
+      <ul>
+        <li><a href="/">Home Page</a></li>
+        <li><a href="/tvseries">TV Series Overview</a></li>
+        <li><a href="/add-tvseries">Add TV Series</a></li>
+      </ul>
+    </nav>
+
   <br>
 
-  <h1 v-if="tvSeries.title">{{tvSeries.title}}</h1>
-  <h1 v-else >TVSeries must have title</h1>
-  <p><b>Description:</b> {{tvSeries.description}}</p>
-  <p><b>Release date:</b> {{tvSeries.releaseDate[2]}}/{{tvSeries.releaseDate[1]}}/{{tvSeries.releaseDate[0]}}</p>
-  <p><b>Number of seasons:</b> {{tvSeries.numSeasons}}</p>
-  <p><b>Number of episodes:</b> {{tvSeries.episodes.length}}</p>
+  <div class="container">
+      <h1 v-if="tvSeries.title">{{tvSeries.title}}</h1>
+      <h1 v-else >TVSeries must have title</h1>
+      <p><b>Description:</b> {{tvSeries.description}}</p>
+      <p><b>Release date:</b> {{tvSeries.releaseDate[2]}}/{{tvSeries.releaseDate[1]}}/{{tvSeries.releaseDate[0]}}</p>
+      <p><b>Number of seasons:</b> {{tvSeries.numSeasons}}</p>
+      <p><b>Number of episodes:</b> {{tvSeries.episodes.length}}</p>
+  </div>
 </template>
+
+<style >
+        .container{
+            margin: auto;
+            display: grid;
+            row-gap: 20px;
+        }
+
+        .container h1{
+            margin-bottom:20px;
+        }
+
+        .container p{
+            font-size: 1.5rem;
+        }
+
+</style>
 
 <script>
 app.component("tvseries-detail", {

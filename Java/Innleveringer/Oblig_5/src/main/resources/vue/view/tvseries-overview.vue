@@ -1,13 +1,16 @@
 <template id="tvseries-overview-template">
-  <p>Navigation Menu:</p>
-  <ul>
-    <li><a href="/">Home Page</a></li>
-    <li><a href="/add-tvseries">Add TV Series</a></li>
-  </ul>
+    <nav>
+    <p>Linjeforeningen</p>
+      <ul>
+        <li><a href="/">Home Page</a></li>
+        <li><a href="/tvseries">TV Series Overview</a></li>
+        <li><a href="/add-tvseries">Add TV Series</a></li>
+      </ul>
+    </nav>
   <br>
 
   <h1>All TV Series</h1>
-  <ul>
+  <ul class="list">
     <li v-for="tvSeries in listOfTVSeries" class="list-element">
       <h2><a :href="`/tvseries/${tvSeries.title}`">{{tvSeries.title + " - Seasons: " + tvSeries.numSeasons}}</a></h2>
       <!--
@@ -38,5 +41,14 @@ app.component("tvseries-overview", {
 </script>
 
 <style>
+
+    .list{
+        margin:auto;
+    }
+
+    .list li{
+        margin-top: 20px;
+    }
+
 
 </style>

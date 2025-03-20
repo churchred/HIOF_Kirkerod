@@ -1,10 +1,14 @@
 <template id="home-page-template">
+    <nav>
+    <p>Linjeforeningen</p>
+      <ul>
+        <li><a href="/">Home Page</a></li>
+        <li><a href="/tvseries">TV Series Overview</a></li>
+        <li><a href="/add-tvseries">Add TV Series</a></li>
+      </ul>
+    </nav>
+
   <h1>Welcome to the TV Series register!</h1>
-  <h2>We currently have two primary pages:</h2>
-  <ol>
-    <li><h3><a href="/tvseries">TV Series Overview</a>: Here you can view all our registered TV Series.</h3></li>
-    <li><h3><a href="/add-tvseries">Create new TV Series</a>: Here you can add a new TV Series to the register.</h3></li>
-  </ol>
 </template>
 
 <script>
@@ -14,5 +18,11 @@
 </script>
 
 <style >
-
+    h1{
+        font-size: 4rem;
+        margin: auto;
+        height: 500px;
+        line-height: 500px;
+        text-align: center;
+    }
 </style>
