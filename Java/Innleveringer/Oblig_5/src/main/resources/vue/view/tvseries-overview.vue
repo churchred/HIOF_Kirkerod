@@ -44,11 +44,28 @@ app.component("tvseries-overview", {
 
     .list{
         margin:auto;
+        list-style-type: none;
     }
 
     .list li{
         margin-top: 20px;
+        padding: 10px;
+        color: black;
+        border: black solid 2px;
+        border-radius: 4px;
+        background-color: white;
+        box-shadow: 1px 1px 5px black;
     }
+
+    .list li h2{
+        margin-bottom: 10px;
+    }
+
+    .list li a:hover{
+        color:rgb(196, 22, 57);
+    }
+
+
 
 
 </style>

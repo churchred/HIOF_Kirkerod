@@ -8,6 +8,7 @@ public class HoneyBadger extends Animal {
 
     public HoneyBadger(String name, LocalDate birthDate) {
         super(name, birthDate);
+        this.species = "Honeybadger";
     }
 
     public int getSnakesEaten(){
