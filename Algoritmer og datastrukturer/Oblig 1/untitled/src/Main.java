@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -10,29 +9,36 @@ public class Main {
         System.out.print("$ ");
         line = input.nextLine();
 
+
         // Encrypts and prints the input string
-        String encryptedText = encrypt(line);
-        System.out.println("Encrypted: " + encryptedText);
+        System.out.println("Encrypt:");
+        System.out.println("   - Word:  " + line);
+        String encryptedText = krypter(line);
+        System.out.println("   - Done:  " + encryptedText);
+
+        // Dencrypts and prints the input string
+        System.out.println("Decrypt:");
+        System.out.println("   - Word:  " + encryptedText);
+        String decryptedText = dekrypter(encryptedText);
+        System.out.println("   - Done:  " + decryptedText);
     }
 
 
-    // Encrypt the given message
-    public static String encrypt(String S){
+    // Encrypt the work (rot13)
+    public static String krypter(String S){
 
         // Creates a stack and a queue
         Stack<Character> stack = new Stack<Character>();
         Queue<Character> queue = new LinkedList<>();
 
-        // Encrypts the given String, 0=move forwards(encrypt),
-        // while 1=move backwards(decrypt)
+        // Encrypts the given String
         S = rot13(S);
-        System.out.println("> " + S);
 
         // Gets all the characters in the given String
         char[] C = S.toCharArray();
 
         // Loop through all chars, encrypts them and places them
-        // in the new list in the right order.
+        // in the new lists in the right order.
         for (int i = 0; i < C.length; i++){
 
             // First half of the chars are
@@ -45,21 +51,20 @@ public class Main {
             }
         }
 
-
         // Where we store all the new chars given from stack/queue
-        List<Character> list = new ArrayList<>();
+        String finalWord = "";
 
         // Alternates between adding from Queue and Stack until both empty
         while (true){
 
             // Take from stack if possible
             if (!stack.isEmpty()) {
-                list.add(stack.pop());
+                finalWord += stack.pop();
             }
 
             // Take from queue if possible
             if (!queue.isEmpty()) {
-                list.add(queue.poll());
+                finalWord += queue.poll();
             }
 
             // Check if both are empty and break loop if so
@@ -69,8 +74,49 @@ public class Main {
 
         }
 
-        return list.toString();
+        return finalWord;
     }
+
+
+
+    // Decrypt the word (rot13)
+    public static String dekrypter(String S){
+
+        // Creates a stack and a queue
+        Stack<Character> stack = new Stack<Character>();
+        Queue<Character> queue = new LinkedList<>();
+
+        // Encrypts the given String,
+        S = rot13(S);
+
+        // Gets all the characters in the given String
+        char[] C = S.toCharArray();
+
+        // String to be returned
+        String finalWord = "";
+
+        // Loop through all chars, then altenrates between adding them to the Queue and Stack.
+        // We do this becuase we added them alternativly when we encypted them earlier
+        for (int i = 0; i < C.length; i++){
+            if (i % 2 == 0){
+                stack.push(C[i]);
+            } else{
+                queue.add(C[i]);
+            }
+        }
+
+        //Then fills with chars from queue
+        while(!queue.isEmpty()){
+            finalWord += queue.poll();
+        }
+        //Fills with chars from stack fist
+        while(!stack.isEmpty()){
+            finalWord += stack.pop();
+        }
+
+        return finalWord;
+    }
+
 
     // Encrypt/Decrypt the given message
     public static String rot13(String S){
@@ -85,6 +131,8 @@ public class Main {
             else if  (c >= 'N' && c <= 'Z') c -= 13;
             C[i] = c;
         }
+
+        System.out.println("   - Rot13: " + String.valueOf(C));
         return String.valueOf(C);
     }
 }
